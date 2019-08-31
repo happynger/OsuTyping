@@ -1,4 +1,4 @@
-//META{"name":"OsuTyping"}
+//META{"name":"OsuTyping"}*//
 
 class OsuTyping
 {
@@ -11,20 +11,34 @@ class OsuTyping
 
 	load()
 	{
+		if (!document.getElementById("OTSFX"))
+		{
+			let sfx = document.createElement("audio");
+			sfx.id = "OTSFX";
+			sfx.src = "https://raw.githubusercontent.com/happynger/OsuTyping/master/menuclick.wav";
+			document.head.appendChild(sfx);
+		}
+	}
 
+	unload()
+	{
+		$("#OTSFX").remove();
 	}
 
 	start()
 	{
-
+		this.initialize();
+		this.onChatInput = e =>
+		{
+			this.sfx.trigger("pause");
+			this.sfx.prop("currentTime", 0);
+			this.sfx.trigger("play");
+		}
 	}
 
 	initialize()
 	{
-		this.onChatInput() = e =>
-		{
-			
-		}
+		this.sfx = $("#OTSFX");
 	}
 
 	stop()

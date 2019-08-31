@@ -1,9 +1,9 @@
-//META{"name":"OsuTyping"}*//
+//META{"name":"OsuTyping", "website":"https://github.com/happynger/OsuTyping", "source":"https://github.com/happynger/OsuTyping"}*//
 
 class OsuTyping
 {
 	getName() {return "Osu Typing";}
-	getVersion() {return "0.1";}
+	getVersion() {return "1.0";}
 	getAuthor() {return "Happy Ori";}
 	getDescription() {return "Adds a clicking sound when you type";}
 

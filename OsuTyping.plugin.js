@@ -9,7 +9,10 @@ class OsuTyping
 
 	initConstructor() {}
 
-	load() {}
+	load()
+	{
+
+	}
 
 	start()
 	{
@@ -20,7 +23,7 @@ class OsuTyping
 	{
 		this.onChatInput() = e =>
 		{
-			const chatbox = e.target;
+			
 		}
 	}
 
